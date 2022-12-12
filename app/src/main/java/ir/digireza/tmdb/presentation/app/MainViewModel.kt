@@ -8,7 +8,7 @@ import javax.inject.Inject
 class MainViewModel @Inject constructor() : ViewModel() {
 
 
-    fun printJT() = println("HEY MARJAN")
+    fun printJT() = println("HEY REZA")
 
 
 }
