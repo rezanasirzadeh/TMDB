@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name=".TMDBApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/Theme.TMDB"
+        tools:targetApi="31">
+        <activity
+            android:name=".presentation.app.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.TMDB">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity android:name=".presentation.movies.show_all.AllMoviesPage"/>
+        <activity android:name=".presentation.movies.details.MovieDetailsPage"/>
+        <activity android:name=".presentation.people.details.PersonDetailsPage"/>
+        <activity android:name=".presentation.tvshows.AllTvshowPage"/>
+        <activity android:name=".presentation.people.show_all.AllPeoplePage"/>
+    </application>
+
+</manifest>
